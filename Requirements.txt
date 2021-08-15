@@ -1,4 +1,0 @@
-
-
-Welcome to our Our project.
-The title of our project is Petrol Pump management system. It is a web based project using Django Framework for backend and HTML, CSS for front end. By this project people easily book and then fill up gas in their vehicle without facing any problem.
