@@ -6,7 +6,7 @@ class Emenities(models.Model):
     def __str__(self):
          return self.name
 
-class Gas(models.Models):
+class Gas(models.Model):
     pump_name = models.CharField(max_length=100)
     pump_address = models.TextField()
     price = models.IntegerField()
