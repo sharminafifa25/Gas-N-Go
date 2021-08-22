@@ -1,17 +1,20 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Emenities(models.Model):
-    name=models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+
     def __str__(self):
-         return self.name
+        return self.name
+
 
 class Gas(models.Model):
     pump_name = models.CharField(max_length=100)
+    pump_image = models.FileField(upload_to='post_image')
     pump_address = models.TextField()
-    price = models.IntegerField()
-    pump_distance = models.IntegerField()
-    pump_image = models.CharField(max_length=500)
+    available_amount = models.IntegerField()
     emenities = models.ManyToManyField(Emenities)
 
     def __str__(self):
