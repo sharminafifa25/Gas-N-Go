@@ -19,16 +19,16 @@ def api_gas(request):
     if available_amount:
         gas_objs = gas_objs.filter(available_amount__lte=available_amount)
 
-    Emenities = request.GET.get('Emenities')
-    if Emenities:
-        Emenities = Emenities.split(',')
+    emenities = request.GET.get('emenities')
+    if emenities:
+        emenities = emenities.split(',')
         em = []
-        for e in Emenities:
+        for e in emenities:
             try:
-              em.append(int(e))
+                em.append(int(e))
             except Exception as e:
                 pass
-        gas_objs = gas_objs.filter(Emenities__in=em).distinct()
+        gas_objs = gas_objs.filter(emenities__in=em).distinct()
 
     payload = []
     for gas_obj in gas_objs:
