@@ -4,6 +4,6 @@ from . import views
 from .views import *
 
 urlpatterns = [
-    path('' ,home ,name="home"),
-    path('payment/', views.payment ,name="payment"),
+    path('', home , name="home"),
+    path('api/gas/', api_gas)
 ]
