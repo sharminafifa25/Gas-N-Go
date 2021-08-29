@@ -6,7 +6,9 @@ from django.http import JsonResponse
 
 
 def home(request):
-    return render(request, 'home.html')
+    emenities = Emenities.objects.all()
+    context = {'emenities': emenities}
+    return render(request, 'home.html', context)
 
 
 def payment(request):
