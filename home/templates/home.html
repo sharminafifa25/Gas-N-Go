@@ -62,36 +62,36 @@
             //if(instance)
           //  console.log(instance.getSelectedValues())
             var emenities = ''
-            //var html =''
+            var html =''
             if(instance){
             emenities = (instance.getSelectedValues())
             }
             fetch(`/api/gas/?emenities=${emenities}&available_amount=${available_amount.value}`)
             .then(result => result.json())
             .then(response => {
-                console.log(response)
-            })
-
-          //      for(var i=0; i <response.length; i++){
-          //          html += `
-             //       <div class="col s3">
-            //            <div class="card">
-           //             <div class="card-image">
-            //            <img src="${response[i].pump_image}">
-            //            </div>
-            //            <span class="card-title black-text">${response}[i].pump_name}</span>
-            //            
-            //            <div class="card-content">
-            //            available_amount - <span class="new badge">${response[i].available_amount}</span>
-            //            <p>${response[i].pump_address}</p> 
-              //         </div>
-
-             //       </div>
-             //     `
-               // }
-              // show_gas_here.innerHTML = html
-           // console.log(response)
+           //     console.log(response)
           //  })
+                for(var i=0; i <response.length; i++){
+                    html += `
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="${response[i].pump_image}">
+                            </div>
+                            <span class="card-title black-text">${response[i].pump_name}</span>
+                     
+                            <div class="card-content">
+                             available_amount - <span class="new badge">${response[i].available_amount}</span>
+                            <p>${response[i].pump_address}</p> 
+                            </div>
+                        </div>
+
+                    </div>
+                `
+                }
+                show_gas_here.innerHTML = html
+            //console.log(html)
+           })
 
 
         }
