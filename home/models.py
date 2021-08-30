@@ -12,7 +12,7 @@ class Emenities(models.Model):
 
 class Gas(models.Model):
     pump_name = models.CharField(max_length=100)
-    pump_image = models.FileField(upload_to='post_image')
+    pump_image = models.CharField(max_length=500)
     pump_address = models.TextField()
     available_amount = models.IntegerField()
     emenities = models.ManyToManyField(Emenities)

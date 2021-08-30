@@ -36,7 +36,7 @@ def api_gas(request):
     for gas_obj in gas_objs:
         result = {}
         result['pump_name'] = gas_obj.pump_name
-       # result['pump_image'] = gas_obj.pump_image
+        result['pump_image'] = gas_obj.pump_image
         result['pump_address'] = gas_obj.pump_address
         result['available_amount'] = gas_obj.available_amount
         payload.append(result)
