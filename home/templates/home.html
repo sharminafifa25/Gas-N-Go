@@ -73,7 +73,8 @@
           //  })
                 for(var i=0; i <response.length; i++){
                     html += `
-                    <div class="col s3">
+                    <div class="col s12">
+                    <div class="col s3 m3">
                         <div class="card">
                             <div class="card-image">
                                 <img src="${response[i].pump_image}">
@@ -81,11 +82,15 @@
                             <span class="card-title black-text">${response[i].pump_name}</span>
                      
                             <div class="card-content">
-                             available_amount - <span class="new badge">${response[i].available_amount}</span>
-                            <p>${response[i].pump_address}</p> 
+                             Available_amount - <span class="badge">${response[i].available_amount}</span>
+                            <p>${(response[i].pump_address).substring(0 , 250)}</p> 
+                            </div>
+                            <div class="card-action">
+                            <a href="#">Payment</a>
                             </div>
                         </div>
 
+                    </div>
                     </div>
                 `
                 }
@@ -95,6 +100,7 @@
 
 
         }
+        getGas()
         </script>
 
 
