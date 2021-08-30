@@ -73,7 +73,7 @@
           //  })
                 for(var i=0; i <response.length; i++){
                     html += `
-                    <div class="col s4 m3"
+                    <div class="col s8"
                     <div class="col s4 m4">
                         <div class="card">
                             <div class="card-image">
@@ -83,7 +83,7 @@
                      
                             <div class="card-content">
                              Available amount - <span class="badge">${response[i].available_amount}</span>
-
+                            <h6>Address:</h6>
                             <p>${(response[i].pump_address).substring(0 , 250)}</p> 
                             </div>
                             <div class="card-action">
