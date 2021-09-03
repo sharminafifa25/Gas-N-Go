@@ -32,18 +32,17 @@ body{
 }
 .owner{
     width: 100%;
-    border: 1px solid;
     margin-right: 40px;
 
 }
 .input-filed{
-    border: 1px;
+    border: 1px solid #999;
 }
 .input-filed input{
 width: 100%;
 border: none;
 outline: none;
-padding: 100px;
+padding: 10px;
 }
 .selection{
     display: flex;
