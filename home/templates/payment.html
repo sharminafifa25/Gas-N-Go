@@ -8,8 +8,9 @@
     <title>Payment Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?
- family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?
+ family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/styles/payment.css' %}">
 </head>
 <body>
     <div class="container">
@@ -66,8 +67,8 @@
                 </div>
                 <div class="cards">
                     <img src="{% static 'home/images/master.png' %}" alt="">
-                    <img src="paypal.png" alt="">
-                    <img src="visa.png" alt="">
+                    <img src="{% static 'home/images/paypal.jpg' %}" alt="">
+                    <img src="{% static 'home/images/visa.png' %}" alt="">
 
                 </div>
             </div>
