@@ -30,15 +30,15 @@ def book(request):
         fuel_amount = request.POST['fuel_amount']
         password = request.POST['password']
         if fuel_type == 'petrol':
-            price = int(int(fuel_amount) * 20)
+            price = int(int(fuel_amount) * 52)
         elif fuel_type == 'octane':  
-            price = int(int(fuel_amount) * 20)
+            price = int(int(fuel_amount) * 95)
         elif fuel_type == 'diesel':
-            price = int(int(fuel_amount) * 20) 
+            price = int(int(fuel_amount) * 65) 
         elif fuel_type == 'natural_gas': 
-            price = int(int(fuel_amount) * 20)
+            price = int(int(fuel_amount) * 64)
         else:
-            price = int(int(fuel_amount) * 20)   
+            price = int(int(fuel_amount) * 42)   
 
 
         book = Contact.objects.create(name=name, password=password, fuel_type=fuel_type, fuel_amount=fuel_amount, price=price)
