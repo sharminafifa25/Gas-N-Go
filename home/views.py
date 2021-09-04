@@ -11,6 +11,10 @@ def home(request):
     return render(request, 'home.html', context)
 
 
+def cart(request):
+    return render(request, 'cart.html')
+
+
 def payment(request):
     return render(request, 'payment.html')
 
