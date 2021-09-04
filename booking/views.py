@@ -1,3 +1,4 @@
+from typing import ContextManager
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from .forms import ContactModelForm
@@ -5,21 +6,15 @@ from .models import Contact
 
 
 def contact(request):
-    # form = ContactModelForm()
-    # if request.method == 'POST':
-    #     form = ContactModelForm(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         return redirect('contact')
-    # if request.is_ajax():
-    #     form = ContactModelForm(request.POST)
-    #     print(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         return JsonResponse({
-    #             'message': 'success'
-    #         })
-    return render(request, 'cat.html')  
+    return render(request, 'cat.html') 
+
+
+
+def preview(request):
+    context = {
+        'items': Contact.objects.all()
+    } 
+    return render(request, 'book_view.html', context) 
 
 
 
@@ -43,6 +38,6 @@ def book(request):
 
         book = Contact.objects.create(name=name, password=password, fuel_type=fuel_type, fuel_amount=fuel_amount, price=price)
         book.save()
-        return redirect('book')
+        return redirect('preview')
     else:
         return render(request, 'cat.html')
